@@ -1,5 +1,5 @@
 {
-  "name": "ab-email",
+  "name": "@appliedblockchain/ab-email",
   "version": "0.0.1",
   "description": "Agnostic email service with a Pugntemplate engine",
   "private": true,
