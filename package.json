@@ -1,0 +1,43 @@
+{
+  "name": "ab-email",
+  "version": "0.0.1",
+  "description": "Agnostic email service with a Pugntemplate engine",
+  "private": true,
+  "main": "src/index.js",
+  "license": "ISC",
+  "scripts": {
+    "coverage": "open -a \"Google Chrome\" ./coverage/lcov-report/index.html",
+    "lint": "eslint . --fix --ignore-path .gitignore",
+    "start": "node ./src",
+    "start:dev": "NODE_ENV=development node ./src",
+    "test": "jest --colors",
+    "test:dev": "jest --colors --watch"
+  },
+  "contributors": [
+    {
+      "name": "Alexis Lui",
+      "email": "alexis@appliedblockchain.com"
+    },
+    {
+      "name": "Anita Amini",
+      "email": "anita@appliedblockchain.com"
+    },
+    {
+      "name": "João Batista",
+      "email": "joao@appliedblockchain.com"
+    }
+  ],
+  "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
+    "config": "^2.0.1",
+    "joi": "^14.0.4",
+    "nodemailer": "^4.6.8",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "@appliedblockchain/eslint-config": "2.5.1",
+    "eslint": "^4.19.1",
+    "jest": "^23.1.0",
+    "nodemon": "^1.17.5"
+  }
+}
