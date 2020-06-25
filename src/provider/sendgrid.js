@@ -7,13 +7,16 @@ const apiKey = config.get('email.sendgrid.apiKey')
 
 sendgridMail.setApiKey(apiKey)
 
-const send = async ({ to, from, subject, text, html }) => {
+const send = async ({ attachments, cc, bcc, to, from, subject, text, html }) => {
   const msg = {
-    to,
+    attachments,
+    bcc,
+    cc,
     from,
+    html,
     subject,
     text,
-    html
+    to
   }
 
   return sendgridMail.send(msg)
