@@ -4,8 +4,8 @@ const { compileTemplates } = require('./template')
 const { send } = require('./email')
 
 const delegateSend = (sendEmail, templateFn) => {
-  return function ({ to, from, subject, text, html }) {
-    const params = Object.assign({ to, from, subject, text }, templateFn({ html }))
+  return function ({ html, ...message }) {
+    const params = Object.assign({ ...message }, templateFn({ html }))
 
     return sendEmail.call(undefined, params)
   }
