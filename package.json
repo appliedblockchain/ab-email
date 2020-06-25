@@ -1,6 +1,6 @@
 {
   "name": "@appliedblockchain/ab-email",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Agnostic email service with a Pugntemplate engine",
   "main": "src/index.js",
   "license": "ISC",
